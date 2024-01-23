@@ -11,7 +11,7 @@ import PaymentSuccess from "./Pages/paymentsuccess";
 // All App's routes defined
 function App() {
 
-  const credentials = useContext(LoginContext);
+  // const credentials = useContext(LoginContext);
 
   return (
     <Routes>
@@ -24,7 +24,8 @@ function App() {
         </Route>
 
         {/* routes for dashboard page will be rendered in defaultlayout  */}
-        {credentials.loggedIn && <Route element={<Suspense fallback={<AppLoader />}><LayoutDashboard /></Suspense>}>
+        {/* credentials.loggedIn && */}
+        { <Route element={<Suspense fallback={<AppLoader />}><LayoutDashboard /></Suspense>}>
           {Dashboardroutes.map((route, index) => {
             const { path, component: Component } = route;
             return <Route key={index} path={path} element={<Suspense fallback={<AppLoader />}><Component /></Suspense>} />

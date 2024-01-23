@@ -5,7 +5,7 @@ const connectDb = require("./config/db");
 const openaiRouter  = require("./routes/openai");
 const usersRouter = require("./routes/users");
 const chatsRouter = require("./routes/chats")
-const paymentRouter = require("./routes/payment")
+// const paymentRouter = require("./routes/payment")
 const lawyerRouter = require("./routes/lawyer")
 
 require("dotenv").config();
@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(openaiRouter);
 app.use(usersRouter);
 app.use(chatsRouter);
-app.use(paymentRouter);
+// app.use(paymentRouter);
 app.use(lawyerRouter);
 
 const PORT = process.env.PORT;
